@@ -14,7 +14,7 @@ Transforming neighborhood trust into a scalable digital reputation system for ho
 
 <p align="center">
 
-![Product Management](https://img.shields.io/badge/Product-Management-blue?style=for-the-badge) ![Case Study](https://img.shields.io/badge/End--to--End-Case%20Study-success?style=for-the-badge) ![Prototype](https://img.shields.io/badge/Prototype-Live-orange?style=for-the-badge) ![React](https://img.shields.io/badge/Built%20With-React-61DAFB?style=for-the-badge) ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![Product Management](https://img.shields.io/badge/Product-Management-blue?style=for-the-badge) ![Case Study](https://img.shields.io/badge/End--to--End-Case%20Study-success?style=for-the-badge) ![Prototype](https://img.shields.io/badge/Prototype-Live-orange?style=for-the-badge) ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
 
 </p>
