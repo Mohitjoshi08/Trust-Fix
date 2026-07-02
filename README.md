@@ -60,7 +60,7 @@ TrustFix is an end-to-end **Product Management case study** that explores how tr
 
 Instead of building another marketplace where every booking starts from zero, TrustFix introduces a **neighborhood-first reputation system** where every verified service strengthens a professional's credibility for future customers.
 
-The project covers the complete product lifecycle—from problem discovery and user research to MVP definition, UX design, go-to-market planning, success metrics, and an interactive prototype.
+The project covers the complete product lifecycle-from problem discovery and user research to MVP definition, UX design, go-to-market planning, success metrics, and an interactive prototype.
 
 > **Goal:** Design a marketplace where trust compounds after every completed service instead of disappearing with each transaction.
 
@@ -115,7 +115,7 @@ During problem analysis, one insight consistently emerged:
 
 Every completed service already generates trust.
 
-The opportunity is not to create trust—but to preserve it, verify it, and allow it to benefit future customers.
+The opportunity is not to create trust-but to preserve it, verify it, and allow it to benefit future customers.
 
 This insight became the foundation of TrustFix.
 
@@ -125,7 +125,7 @@ This insight became the foundation of TrustFix.
 
 TrustFix is a neighborhood-first home services marketplace designed around one core principle:
 
-> **Trust should compound—not reset—after every verified service.**
+> **Trust should compound-not reset-after every verified service.**
 
 The platform combines:
 
@@ -462,7 +462,7 @@ These documents provide additional context without overloading the main README.
 
 Building TrustFix reinforced several important product management principles.
 
-- Great products start with a clear understanding of the problem—not the solution.
+- Great products start with a clear understanding of the problem-not the solution.
 - Product managers create value by making informed trade-offs, not by adding more features.
 - Trust is not a standalone feature; it emerges from consistent product experiences.
 - Marketplace products require balancing customer and provider incentives simultaneously.
