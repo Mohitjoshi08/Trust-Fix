@@ -542,8 +542,7 @@ This allows engineering resources to focus on validating product-market fit inst
 
 📱 Customer App Screens
 
-<img width="278" height="868" alt="image" src="https://github.com/user-attachments/assets/3cd61006-9e9e-44cf-bc85-6a95e1e535d8" />
-
+<img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/02-home-dashboard.png" /><img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/04-provider-profile.png" /><img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/08-service-verification.png" />
 
 </p>
 
@@ -553,7 +552,8 @@ This allows engineering resources to focus on validating product-market fit inst
 
 🛠️ Provider App Screens
 
-<img width="281" height="871" alt="image" src="https://github.com/user-attachments/assets/1141e6d4-7632-4171-b679-a50f1443a0ab" />
+<img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/02-job-request.png" /><img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/05-waiting-verification.png" /><img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/06-reputation-dashboard.png" />
+
 
 
 </p>
