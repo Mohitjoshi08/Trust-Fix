@@ -337,7 +337,7 @@ Launching a two-sided marketplace requires balancing supply and demand from day 
 
 Instead of scaling immediately, TrustFix adopts a phased rollout focused on building trust within dense local communities before expanding geographically.
 
-## Phase 1 — Apartment Communities
+## Phase 1 -Apartment Communities
 
 **Objective**
 
@@ -347,7 +347,7 @@ Instead of scaling immediately, TrustFix adopts a phased rollout focused on buil
 
 ---
 
-## Phase 2 — Neighborhood Expansion
+## Phase 2 -Neighborhood Expansion
 
 **Objective**
 
@@ -357,7 +357,7 @@ Instead of scaling immediately, TrustFix adopts a phased rollout focused on buil
 
 ---
 
-## Phase 3 — City Expansion
+## Phase 3 -City Expansion
 
 **Objective**
 
@@ -475,7 +475,7 @@ Building TrustFix reinforced several important product management principles.
 
 The MVP establishes the foundation for a trusted neighborhood marketplace. Future iterations can expand the product while preserving the core trust model.
 
-## Phase 1 — Current MVP
+## Phase 1 -Current MVP
 
 - Customer PWA
 - Provider PWA
