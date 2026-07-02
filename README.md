@@ -14,7 +14,7 @@ Transforming neighborhood trust into a scalable digital reputation system for ho
 
 <p align="center">
 
-![Product Management](https://img.shields.io/badge/Product-Management-blue?style=for-the-badge) ![Case Study](https://img.shields.io/badge/End--to--End-Case%20Study-success?style=for-the-badge) ![Prototype](https://img.shields.io/badge/Prototype-Live-orange?style=for-the-badge) ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![Product Management](https://img.shields.io/badge/Product-Management-blue?style=for-the-badge) ![Case Study](https://img.shields.io/badge/End--to--End-Case%20Study-success?style=for-the-badge) ![Prototype](https://img.shields.io/badge/Prototype-Live-orange?style=for-the-badge) ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge) ![MVP Strategy](https://img.shields.io/badge/MVP-Strategy-yellow?style=for-the-badge)
 
 
 </p>
@@ -793,10 +793,6 @@ TrustFix
 │   ├── screenshots
 │   ├── diagrams
 │   └── hero-banner.png
-│
-├── prototype
-│   ├── customer
-│   └── provider
 │
 ├── research
 │   ├── assumptions.md
