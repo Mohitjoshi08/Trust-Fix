@@ -227,7 +227,7 @@ The following screens demonstrate the proposed MVP experience for both customers
 
 <p align="center">
 
-<img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider-journey/02-job-request.png" /><img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider-journey/05-waiting-verification.png" /><img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider-journey/06-reputation-dashboard.png" />
+<img width="281" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider-journey/02-job-request.png" /><img width="281" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider-journey/05-waiting-verification.png" /> <img width="281" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider-journey/06-reputation-dashboard.png" />
 
 </p>
 
