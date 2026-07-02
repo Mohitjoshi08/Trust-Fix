@@ -767,11 +767,6 @@ A repeat booking indicates that customers trusted the platform enough to return 
 
 ---
 
-# Prototype
-
-
----
-
 # Technology Stack
 
 | Category | Technology |
