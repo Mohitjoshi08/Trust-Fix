@@ -23,7 +23,7 @@ Transforming neighborhood trust into a scalable digital reputation system for ho
 
 <p align="center">
 
-<a href="[YOUR_VERCEL_LINK](https://trust-fix-pwa.vercel.app/)">
+<a href="https://trust-fix-pwa.vercel.app">
 <img src="https://img.shields.io/badge/🌐_Live_Demo-Visit-blue?style=for-the-badge">
 </a>
 
