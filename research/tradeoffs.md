@@ -1,282 +1,114 @@
 # Product Trade-offs
 
-## Overview
-
-Every successful product is shaped by trade-offs.
-
-Given the constraints of this case study—including limited engineering resources, the need for an MVP, varying provider digital literacy, and scalability requirements—many decisions involved consciously choosing one benefit while accepting another limitation.
-
-This document outlines the key trade-offs made during the design of TrustFix and the reasoning behind each decision.
+Every product decision involves balancing user value, engineering effort, business goals, and time-to-market. The following trade-offs shaped the MVP for TrustFix.
 
 ---
 
-# Trade-off 1 — WhatsApp Entry vs Dedicated Mobile App
+# 1. WhatsApp Entry vs Native App Onboarding
 
-## Decision
+| Chosen | Alternative |
+|---------|-------------|
+| WhatsApp Entry | Native Mobile App |
 
-Use WhatsApp as the primary customer entry point before transitioning users to the TrustFix Progressive Web App.
+### Why this decision?
 
-## Why?
+Customers already use WhatsApp for neighborhood recommendations. Using it as the initial entry point reduces friction by eliminating the need to install a new application before exploring the service.
 
-Many customers already discover home service professionals through WhatsApp groups and personal contacts.
+### Trade-off
 
-Leveraging an existing habit reduces friction and accelerates adoption.
+- Lower onboarding friction
+- Faster customer acquisition
 
-## Benefits
-
-- No app installation required
-- Faster onboarding
-- Familiar user experience
-- Lower customer acquisition friction
-
-## Costs
-
-- Dependency on WhatsApp
-- Less control over the initial user experience
-- Reduced brand visibility compared to a standalone app
+**Accepted Limitation:** Less control over the initial user experience and dependence on WhatsApp deep linking.
 
 ---
 
-# Trade-off 2 — Progressive Web App vs Native Applications
+# 2. Progressive Web App vs Native Applications
 
-## Decision
+| Chosen | Alternative |
+|---------|-------------|
+| Progressive Web App (PWA) | Separate Android & iOS Apps |
 
-Develop a Progressive Web App for both customers and providers.
+### Why this decision?
 
-## Why?
+The case assumed limited engineering resources. A PWA enables faster development, lower maintenance, and cross-platform compatibility while remaining sufficient for MVP validation.
 
-The case assumes limited engineering resources.
-
-A PWA enables faster development and supports both Android and iOS users without maintaining separate codebases.
-
-## Benefits
+### Trade-off
 
 - Faster development
-- Lower maintenance cost
-- Cross-platform compatibility
-- Rapid deployment and updates
+- Lower development cost
+- Single codebase
 
-## Costs
-
-- Limited access to some native device features
-- Reduced offline capabilities
-- No visibility through app stores
+**Accepted Limitation:** Reduced access to certain native device capabilities compared to dedicated mobile applications.
 
 ---
 
-# Trade-off 3 — Trust Over Marketplace Scale
+# 3. Verified Trust Score vs Ratings-Only System
 
-## Decision
+| Chosen | Alternative |
+|---------|-------------|
+| Verified Trust Score | Star Ratings Only |
 
-Prioritize verified trust signals instead of rapidly increasing the number of providers.
+### Why this decision?
 
-## Why?
+Traditional ratings can be manipulated and often lack context. TrustFix prioritizes verified completed services to build provider credibility using real work history rather than anonymous reviews alone.
 
-A marketplace with thousands of providers but weak trust creates poor customer experiences.
+### Trade-off
 
-Building trust first creates a stronger long-term foundation.
+- More reliable reputation
+- Stronger customer confidence
 
-## Benefits
-
-- Higher booking confidence
-- Better customer retention
-- Stronger provider credibility
-
-## Costs
-
-- Slower initial marketplace growth
-- Smaller provider network during early stages
+**Accepted Limitation:** Verification introduces additional steps after service completion.
 
 ---
 
-# Trade-off 4 — Verified Reputation vs Simple Ratings
+# 4. Focused MVP vs Feature-Rich Marketplace
 
-## Decision
+| Chosen | Alternative |
+|---------|-------------|
+| Core Marketplace Features | Large Feature Set |
 
-Base provider credibility on verified service history instead of relying only on star ratings.
+### Why this decision?
 
-## Why?
+The primary objective of the MVP is to validate whether verified neighborhood reputation improves customer trust. Features that do not directly support this hypothesis were intentionally deferred.
 
-Ratings alone can be subjective or manipulated.
-
-Verified completed jobs provide stronger evidence of provider reliability.
-
-## Benefits
-
-- Greater transparency
-- Harder to manipulate
-- More meaningful trust indicators
-
-## Costs
-
-- Additional verification steps
-- Higher implementation complexity
-- Slightly longer service completion workflow
-
----
-
-# Trade-off 5 — Simplicity vs Feature Richness
-
-## Decision
-
-Build a focused MVP instead of including every possible marketplace feature.
-
-## Why?
-
-The objective of the MVP is to validate the core hypothesis, not maximize functionality.
-
-## Benefits
-
-- Faster launch
-- Easier user onboarding
-- Reduced engineering effort
-- Clearer product focus
-
-## Costs
-
-Deferred features include:
+### Deferred Features
 
 - AI recommendations
 - Loyalty programs
 - Insurance
 - Escrow payments
-- Community features
-- Advanced analytics
+- Referral rewards
+- Subscription plans
+
+**Accepted Limitation:** A simpler product with fewer convenience features during the initial launch.
 
 ---
 
-# Trade-off 6 — Separate Customer & Provider Experiences vs Unified Application
+# 5. Apartment Communities vs City-Wide Launch
 
-## Decision
+| Chosen | Alternative |
+|---------|-------------|
+| Apartment Communities | Immediate City-Wide Expansion |
 
-Design dedicated experiences for customers and service providers.
+### Why this decision?
 
-## Why?
+Marketplaces face a cold-start problem. Concentrating supply and demand within residential communities increases the likelihood of successful matches and allows provider reputation to develop more quickly.
 
-The two user groups have fundamentally different goals and workflows.
+### Trade-off
 
-Separate interfaces improve usability for both.
+- Higher marketplace density
+- Faster trust formation
+- Easier operational validation
 
-## Benefits
-
-- Lower cognitive load
-- Simpler navigation
-- Better task efficiency
-
-## Costs
-
-- Additional design effort
-- Larger interface surface to maintain
+**Accepted Limitation:** Slower geographic expansion during the early stages.
 
 ---
 
-# Trade-off 7 — Neighborhood Reputation vs Global Rankings
+# Key Takeaway
 
-## Decision
+The objective of the MVP was not to build the most feature-rich home services platform, but to validate one core hypothesis:
 
-Trust is built locally rather than across the entire platform.
+> **Can verified neighborhood reputation increase customer trust and improve booking confidence?**
 
-## Why?
-
-Customers care more about professionals who have successfully completed work in nearby communities than about city-wide popularity.
-
-## Benefits
-
-- More relevant trust signals
-- Better local recommendations
-- Stronger community network effects
-
-## Costs
-
-- Reputation grows more gradually
-- Providers need time to establish credibility in new areas
-
----
-
-# Trade-off 8 — Manual Verification vs Instant Completion
-
-## Decision
-
-Require customer confirmation before a service is marked as verified.
-
-## Why?
-
-Verification strengthens the credibility of the reputation system.
-
-## Benefits
-
-- Authentic service records
-- Reduced fraud
-- Higher trust
-
-## Costs
-
-- Additional user interaction
-- Potential delays if customers do not verify promptly
-
----
-
-# Trade-off 9 — Apartment-First Launch vs City-Wide Expansion
-
-## Decision
-
-Begin with gated residential communities before expanding geographically.
-
-## Why?
-
-Apartment communities naturally create concentrated demand and trusted local networks.
-
-## Benefits
-
-- Easier marketplace liquidity
-- Faster trust building
-- Higher repeat booking potential
-
-## Costs
-
-- Limited early market reach
-- Slower geographic expansion
-
----
-
-# Trade-off 10 — Product Validation vs Technical Perfection
-
-## Decision
-
-Prioritize validating the product hypothesis over building a technically comprehensive platform.
-
-## Why?
-
-The objective is to determine whether neighborhood-based verified reputation improves trust in home service bookings.
-
-Engineering effort should focus on validating this assumption rather than implementing every possible feature.
-
-## Benefits
-
-- Faster learning
-- Reduced development effort
-- Quicker iteration cycles
-
-## Costs
-
-- Technical limitations remain
-- Some advanced functionality is postponed
-
----
-
-# Key Takeaways
-
-Throughout the development of TrustFix, every major decision involved balancing competing priorities.
-
-The guiding principle was not to maximize the number of features, but to maximize learning while staying within realistic engineering and business constraints.
-
-Rather than asking **"What else can we build?"**, each decision was evaluated by asking:
-
-- Does this increase customer trust?
-- Does this simplify the user experience?
-- Does this help validate the core product hypothesis?
-- Can this realistically be delivered within an MVP?
-
-Whenever a feature failed one or more of these questions, it was intentionally deferred.
-
-This disciplined approach ensured that the MVP remained focused on solving its primary problem—building trust in the home services marketplace—while creating a strong foundation for future iterations.
+Every major product decision was evaluated against this hypothesis. Features or approaches that did not directly contribute to validating it were intentionally deferred to future iterations.

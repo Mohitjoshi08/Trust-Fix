@@ -1,384 +1,174 @@
 # Product Decisions
 
-## Overview
+This document explains the major product decisions made while designing TrustFix. Each decision was evaluated against the project's primary objective:
 
-Every product is the result of hundreds of decisions made under constraints.
-
-TrustFix was designed as a Product Management case study with limited engineering resources, a fixed MVP scope, and a strong emphasis on solving one core problem: **building trust in home service marketplaces.**
-
-This document explains the reasoning behind the major product decisions made throughout the project.
+> **Increase customer trust while remaining feasible to build as a constrained MVP.**
 
 ---
 
-# Decision 1 — Use WhatsApp as the Primary Customer Entry Point
+# 1. WhatsApp as the Primary Entry Point
 
 ## Decision
 
-Customers enter TrustFix through WhatsApp before being redirected to the TrustFix Progressive Web App.
+Use WhatsApp as the first customer touchpoint instead of requiring users to install a dedicated mobile application.
 
-## Alternatives Considered
+## Why?
 
-- Native Android Application
-- Native iOS Application
-- Progressive Web App (Direct Entry)
-- **WhatsApp + Progressive Web App (Selected)**
+The problem statement highlighted that customers already rely heavily on WhatsApp groups and local communities for home service recommendations. Rather than changing existing user behavior, TrustFix builds on it.
 
-## Why This Decision?
+Starting from a familiar platform reduces friction, lowers customer acquisition effort, and allows users to begin their journey without installing another application.
 
-Many customers already discover service professionals through WhatsApp groups and personal conversations.
+## Alternative Considered
 
-Instead of changing existing user behavior, TrustFix integrates into it.
+A traditional app-first onboarding flow.
 
-Using WhatsApp reduces onboarding friction while keeping the product accessible to users who may not want to install another application.
+## Why It Was Rejected
 
-This approach also aligns with the MVP objective of validating demand before investing in native applications.
-
-## Trade-offs
-
-### Advantages
-
-- No installation required
-- Familiar entry point
-- Lower acquisition friction
-- Faster MVP rollout
-
-### Disadvantages
-
-- Dependency on WhatsApp
-- Less branding during onboarding
-- Limited control over the first interaction
-
-## Validation
-
-- Measure onboarding completion rate
-- Compare conversion with direct PWA entry
-- Track customer acquisition cost
+Requiring an app download introduces unnecessary friction before users experience any value, reducing adoption during the MVP stage.
 
 ---
 
-# Decision 2 — Build a Progressive Web App Instead of Native Apps
+# 2. Progressive Web App (PWA) Instead of Native Apps
 
 ## Decision
 
-Develop the MVP as a Progressive Web App for both customers and providers.
+Build both customer and provider experiences as Progressive Web Apps.
 
-## Alternatives Considered
+## Why?
 
-- Android Application
-- Android + iOS
-- Flutter
-- **Progressive Web App (Selected)**
+The case assumed limited engineering resources. A PWA provides a modern user experience while requiring significantly less development and maintenance effort than separate Android and iOS applications.
 
-## Why This Decision?
+This allows engineering resources to focus on validating the core product hypothesis instead of platform-specific implementation.
 
-The case explicitly assumes limited engineering resources.
+## Alternative Considered
 
-A Progressive Web App enables faster development, easier maintenance, and cross-platform compatibility while still providing a modern user experience.
+Separate native applications.
 
-The goal of the MVP is to validate the product hypothesis—not optimize platform-specific experiences.
+## Why It Was Rejected
 
-## Trade-offs
-
-### Advantages
-
-- Faster development
-- Lower engineering cost
-- Cross-platform support
-- Instant updates
-
-### Disadvantages
-
-- Limited offline capabilities
-- Reduced access to native APIs
-- Less app-store visibility
-
-## Validation
-
-- Track session duration
-- Monitor user retention
-- Measure provider usability
+Higher development cost, longer release cycles, and unnecessary complexity for an MVP.
 
 ---
 
-# Decision 3 — Focus on Neighborhood-Based Trust
+# 3. Neighborhood-Based Reputation
 
 ## Decision
 
-Build reputation primarily around neighborhood-level trust rather than city-wide popularity.
+Build provider reputation around verified work completed within local communities.
 
-## Alternatives Considered
+## Why?
 
-- City-wide ranking
-- Category ranking
-- Rating-based discovery
-- **Neighborhood trust (Selected)**
+Trust in home services is often highly local. Customers naturally place greater confidence in professionals who have successfully completed work for nearby residents.
 
-## Why This Decision?
+Neighborhood-based reputation makes trust more relevant, easier to understand, and harder to manipulate than platform-wide ratings alone.
 
-Home service bookings involve inviting someone into personal spaces.
+## Alternative Considered
 
-People naturally place greater confidence in professionals who have successfully worked within their own communities.
+A global provider rating system.
 
-Local trust is significantly more meaningful than generic popularity.
+## Why It Was Rejected
 
-## Trade-offs
-
-### Advantages
-
-- Higher booking confidence
-- Better local relevance
-- Stronger network effects
-
-### Disadvantages
-
-- Slower expansion
-- Reputation grows gradually
-- Smaller initial provider pool
-
-## Validation
-
-- Compare booking conversion between local and non-local providers
-- Measure repeat bookings
-- Conduct customer interviews
+Overall ratings lack local context and may not accurately represent trust within a customer's immediate community.
 
 ---
 
-# Decision 4 — Prioritize Verified Service History Over Ratings
+# 4. Verified Trust Score Instead of Ratings Alone
 
 ## Decision
 
-Provider credibility should primarily come from verified completed services rather than anonymous ratings.
+Use verified service completion as the foundation of provider reputation.
 
-## Alternatives Considered
+## Why?
 
-- Star Ratings
-- Written Reviews
-- Likes
-- **Verified Service History (Selected)**
+Star ratings are useful but can be subjective, inconsistent, or manipulated.
 
-## Why This Decision?
+TrustFix gives greater importance to verified work history, allowing reputation to reflect actual completed services rather than anonymous opinions alone.
 
-Ratings alone are often subjective and susceptible to manipulation.
+The Trust Score combines multiple signals, including verified jobs, completion rate, repeat customers, and neighborhood reputation.
 
-Verified completed services provide objective evidence that work was successfully delivered.
+## Alternative Considered
 
-This creates stronger trust signals for future customers.
+Traditional five-star ratings.
 
-## Trade-offs
+## Why It Was Rejected
 
-### Advantages
-
-- Harder to manipulate
-- More transparent
-- Better long-term credibility
-
-### Disadvantages
-
-- Requires verification flow
-- Higher implementation effort
-
-## Validation
-
-- Compare booking conversion
-- Measure customer confidence
-- Analyze provider engagement
+Ratings alone do not provide sufficient confidence for high-trust services such as plumbing, electrical work, or appliance repair.
 
 ---
 
-# Decision 5 — Build Separate Experiences for Customers and Providers
+# 5. Separate Experiences for Customers and Providers
 
 ## Decision
 
-Create dedicated interfaces for customers and service professionals.
+Design dedicated interfaces for customers and service professionals.
 
-## Alternatives Considered
-
-- Single application
-- Role switching
-- **Separate Customer & Provider PWAs (Selected)**
-
-## Why This Decision?
+## Why?
 
 Customers and providers have fundamentally different goals.
 
-Customers focus on discovery and booking.
+Customers focus on discovering, comparing, and booking trusted professionals, while providers need operational tools to manage jobs, earnings, and reputation.
 
-Providers focus on operations, scheduling, and reputation.
+Separate experiences reduce unnecessary complexity and improve usability for both user groups.
 
-Dedicated experiences simplify both workflows.
+## Alternative Considered
 
-## Trade-offs
+A single application supporting both roles.
 
-### Advantages
+## Why It Was Rejected
 
-- Cleaner interfaces
-- Lower cognitive load
-- Better usability
-
-### Disadvantages
-
-- Additional design effort
-- More screens to maintain
-
-## Validation
-
-- Task completion time
-- Usability testing
-- User satisfaction
+Combining both experiences would increase interface complexity and create unnecessary friction, particularly for providers with varying levels of digital literacy.
 
 ---
 
-# Decision 6 — Keep the MVP Focused
+# 6. Trust-Focused MVP
 
 ## Decision
 
-Only include features directly supporting trust, booking, and service completion.
+Prioritize only the features required to validate the core trust hypothesis.
 
-## Alternatives Considered
+## Why?
 
-Include:
+The objective of the MVP is learning—not feature completeness.
 
-- Loyalty Program
-- Rewards
-- AI Matching
-- Chat
-- Community Forum
-- Escrow
+Every included feature contributes directly to one of three activities:
+
+- Discover trusted providers
+- Complete verified services
+- Build provider reputation
+
+Features that did not support this learning objective were intentionally deferred.
+
+## Deferred Features
+
+- AI recommendations
+- Referral programs
+- Loyalty rewards
 - Insurance
-
-**Selected**
-
-A focused MVP.
-
-## Why This Decision?
-
-The objective of an MVP is to validate the core hypothesis with minimum engineering effort.
-
-Adding secondary features increases complexity without validating the primary value proposition.
-
-## Trade-offs
-
-### Advantages
-
-- Faster launch
-- Lower engineering effort
-- Clear product focus
-
-### Disadvantages
-
-- Limited functionality
-- Some user expectations deferred
-
-## Validation
-
-- Feature request analysis
-- User feedback
-- Product adoption
+- Escrow payments
+- Subscription plans
+- Advanced analytics
 
 ---
 
-# Decision 7 — Design for Low Digital Literacy
+# Decision-Making Framework
 
-## Decision
+Major product decisions were evaluated using four criteria:
 
-The provider experience should prioritize simplicity over feature density.
+| Criterion | Purpose |
+|----------|---------|
+| Customer Value | Does it solve a meaningful user problem? |
+| Business Impact | Does it strengthen the marketplace? |
+| Engineering Effort | Can it be delivered within MVP constraints? |
+| Trust Contribution | Does it increase customer confidence? |
 
-## Alternatives Considered
-
-- Advanced dashboards
-- Feature-rich interface
-- **Simple operational interface (Selected)**
-
-## Why This Decision?
-
-Service professionals have varying levels of digital literacy.
-
-Reducing cognitive load improves usability and reduces onboarding friction.
-
-The interface focuses only on essential actions.
-
-## Trade-offs
-
-### Advantages
-
-- Faster learning
-- Better adoption
-- Lower support requirements
-
-### Disadvantages
-
-- Less customization
-- Fewer advanced capabilities
-
-## Validation
-
-- Task completion success
-- Onboarding time
-- Error rate
+Only decisions that performed well across these dimensions were included in the proposed MVP.
 
 ---
 
-# Decision 8 — Apartment-First Go-To-Market Strategy
+# Summary
 
-## Decision
+Every major decision in TrustFix supports the same guiding principle:
 
-Launch within gated residential communities before expanding city-wide.
+> **Trust should become a product capability rather than a marketing promise.**
 
-## Alternatives Considered
-
-- City-wide launch
-- Category-first launch
-- Digital-only launch
-- **Apartment-first rollout (Selected)**
-
-## Why This Decision?
-
-Marketplaces require both supply and demand.
-
-Apartment communities naturally concentrate customers while enabling trusted referrals.
-
-This increases the probability of achieving early marketplace liquidity.
-
-## Trade-offs
-
-### Advantages
-
-- Easier trust building
-- Dense demand
-- Higher repeat bookings
-
-### Disadvantages
-
-- Smaller initial market
-- Slower geographic expansion
-
-## Validation
-
-- Booking frequency
-- Repeat customer rate
-- Provider utilization
-
----
-
-# Product Decision Framework
-
-Every decision throughout this project was evaluated using four questions:
-
-1. Does it increase customer trust?
-2. Does it simplify the user experience?
-3. Can it be realistically built within MVP constraints?
-4. Does it create value for both customers and providers?
-
-If a proposed feature failed any of these questions, it was intentionally excluded from the MVP.
-
----
-
-# Key Takeaways
-
-The strongest lesson from this project was that successful product management is rarely about choosing which features to build.
-
-Instead, it is about deciding which features **not** to build.
-
-Every decision in TrustFix reflects a balance between user value, engineering constraints, business viability, and long-term product vision.
-
-The final product is intentionally focused—not because additional ideas were unavailable, but because solving one problem exceptionally well is often more valuable than solving many problems superficially.
+Instead of maximizing the number of features, the product focuses on validating whether verified neighborhood reputation can improve customer confidence, strengthen provider credibility, and create sustainable marketplace growth.

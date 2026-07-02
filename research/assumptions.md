@@ -1,259 +1,88 @@
 # Product Assumptions
 
-## Overview
-
-This project was developed as a Product Management case study rather than a production product. Due to the absence of primary user research, several assumptions were made during the product design process.
-
-These assumptions influenced feature prioritization, user experience decisions, and the overall MVP strategy. Each assumption includes its rationale, associated risks, and a proposed validation plan for future iterations.
+This project was developed as part of a Product Management case study. Due to the absence of primary user research, the following assumptions were made based on the problem statement, industry trends, and secondary research. These assumptions informed product decisions and should be validated through user interviews and MVP testing.
 
 ---
 
-# Assumption 1: Users Trust Local Recommendations More Than Anonymous Reviews
+# Customer Assumptions
 
-## Assumption
+### 1. Trust outweighs price for most bookings.
 
-Customers place greater trust in recommendations from neighbors, apartment communities, and local WhatsApp groups than in anonymous online reviews.
-
-## Why This Assumption?
-
-Home service bookings involve inviting someone into a personal space. In such situations, trust is often built through social proof rather than platform ratings alone.
-
-## Product Impact
-
-This assumption directly influenced:
-
-- Neighborhood-first marketplace design
-- Community trust indicators
-- Provider reputation model
-
-## Risk
-
-This behavior may differ across cities, demographics, or service categories.
-
-## Validation Plan
-
-- Conduct customer interviews
-- Compare booking conversion rates between local and non-local providers
-- Measure engagement with neighborhood trust indicators
+Customers are willing to pay a reasonable premium for service professionals they consider trustworthy, especially for high-impact home services such as plumbing, electrical work, and appliance repair.
 
 ---
 
-# Assumption 2: WhatsApp Is the Lowest-Friction Entry Point
+### 2. Most customers rely on informal referrals.
 
-## Assumption
-
-Customers are more likely to begin their booking journey through WhatsApp than by installing a dedicated mobile application.
-
-## Why This Assumption?
-
-WhatsApp is already deeply integrated into daily communication for many Indian households and residential communities.
-
-Reducing installation friction should improve initial adoption.
-
-## Product Impact
-
-This assumption influenced:
-
-- WhatsApp-first acquisition
-- Progressive Web App strategy
-- Lightweight onboarding
-
-## Risk
-
-Some users may still prefer dedicated mobile applications.
-
-## Validation Plan
-
-- Measure click-to-book conversion
-- Compare onboarding completion between WhatsApp and direct PWA access
+Recommendations from neighbors, friends, and WhatsApp groups remain one of the most trusted ways to discover home service professionals.
 
 ---
 
-# Assumption 3: Providers Can Successfully Use a Simple Progressive Web App
+### 3. Customers value transparency.
 
-## Assumption
-
-Most service professionals can comfortably manage bookings through a simplified web interface.
-
-## Why This Assumption?
-
-Building separate native applications would significantly increase engineering effort.
-
-A simple interface reduces development complexity while remaining accessible.
-
-## Product Impact
-
-This influenced:
-
-- Large buttons
-- Minimal navigation
-- Reduced cognitive load
-- Provider-first dashboard
-
-## Risk
-
-Digital literacy varies significantly among providers.
-
-## Validation Plan
-
-- Conduct usability testing
-- Measure task completion time
-- Track onboarding success
+Users want visibility into provider credibility, pricing, arrival status, and previous verified work before making a booking.
 
 ---
 
-# Assumption 4: Verified Service History Builds More Trust Than Ratings Alone
+### 4. Low-friction onboarding improves adoption.
 
-## Assumption
-
-Customers value verified work history more than anonymous star ratings.
-
-## Why This Assumption?
-
-Ratings provide limited context and may be manipulated.
-
-Verified completed jobs provide stronger evidence of provider reliability.
-
-## Product Impact
-
-This assumption led to:
-
-- Service verification flow
-- Work completion confirmation
-- Reputation dashboard
-
-## Risk
-
-Customers may still rely heavily on ratings.
-
-## Validation Plan
-
-- A/B test provider profiles
-- Compare booking conversion rates
-- Gather qualitative customer feedback
+Reducing installation requirements and allowing customers to start from familiar platforms such as WhatsApp can improve initial user acquisition.
 
 ---
 
-# Assumption 5: Simplicity Is More Valuable Than Feature Richness in the MVP
+# Provider Assumptions
 
-## Assumption
+### 1. Providers want repeat business.
 
-Launching a focused MVP is more effective than building a feature-heavy marketplace.
-
-## Why This Assumption?
-
-The objective is to validate the core trust hypothesis—not solve every marketplace challenge.
-
-## Product Impact
-
-The MVP intentionally excludes:
-
-- AI recommendations
-- Loyalty programs
-- Insurance
-- Escrow payments
-- Advanced analytics
-- Gamification
-
-## Risk
-
-Some users may perceive the product as incomplete.
-
-## Validation Plan
-
-- Monitor feature requests
-- Measure customer satisfaction
-- Evaluate product adoption
+Service professionals are motivated by long-term customer relationships rather than one-time transactions.
 
 ---
 
-# Assumption 6: Reputation Encourages Better Provider Behavior
+### 2. Digital literacy varies.
 
-## Assumption
-
-Providers will consistently deliver better service if future business depends on their verified reputation.
-
-## Why This Assumption?
-
-A transparent reputation system creates long-term incentives rather than one-time transaction incentives.
-
-## Product Impact
-
-This assumption influenced:
-
-- Trust Score
-- Neighborhood Rank
-- Completion Rate
-- Repeat Customer metrics
-
-## Risk
-
-Some providers may attempt to manipulate reputation.
-
-## Validation Plan
-
-- Monitor verification integrity
-- Detect suspicious activity
-- Analyze reputation trends
+Many providers are comfortable using smartphones but may struggle with complex interfaces. The product should therefore prioritize simplicity over feature richness.
 
 ---
 
-# Assumption 7: Apartment Communities Are the Best Initial Market
+### 3. Reputation influences future earnings.
 
-## Assumption
-
-Launching within gated residential communities provides the highest probability of achieving early marketplace liquidity.
-
-## Why This Assumption?
-
-Apartment complexes naturally create concentrated demand and encourage trusted recommendations.
-
-## Product Impact
-
-This assumption shaped the Go-To-Market strategy.
-
-## Risk
-
-The strategy may not generalize to independent housing areas.
-
-## Validation Plan
-
-- Pilot in multiple apartment complexes
-- Measure repeat bookings
-- Compare expansion performance
+Providers are willing to complete verification steps if they directly contribute to increased visibility and future bookings.
 
 ---
 
-# Assumption 8: Trust Is the Primary Competitive Advantage
+# Business Assumptions
 
-## Assumption
+### 1. Apartment communities are suitable launch markets.
 
-Customers prioritize trustworthy professionals over the lowest price.
-
-## Why This Assumption?
-
-For home services, poor quality often results in higher long-term costs than paying a slightly higher service fee.
-
-## Product Impact
-
-The entire product is centered around trust rather than pricing competition.
-
-## Risk
-
-Price-sensitive users may choose cheaper alternatives.
-
-## Validation Plan
-
-- Measure booking behavior
-- Analyze customer retention
-- Conduct pricing experiments
+Launching within dense residential communities can help overcome the cold-start problem by concentrating both supply and demand.
 
 ---
 
-# Summary
+### 2. Verified transactions build stronger trust.
 
-The assumptions documented above served as the foundation for product decisions throughout this case study.
+Reputation generated through verified completed services is likely to be more credible than anonymous ratings alone.
 
-Rather than treating these assumptions as facts, they should be viewed as hypotheses that require validation through user research, usability testing, pilot launches, and continuous product experimentation.
+---
 
-Validating or disproving these assumptions would guide future iterations of TrustFix and help refine both the product strategy and user experience.
+### 3. Trust creates network effects.
+
+As more verified services are completed, provider credibility increases, encouraging additional bookings and strengthening the marketplace over time.
+
+---
+
+# Assumptions to Validate
+
+The MVP is designed to test the following key assumptions:
+
+- Will customers complete service verification after every booking?
+- Does a visible Trust Score influence booking decisions?
+- Does verified work history increase provider selection?
+- Does WhatsApp reduce onboarding friction compared to an app-first approach?
+- Will providers consistently upload proof of completed work?
+- Does launching within apartment communities accelerate marketplace adoption?
+
+---
+
+# Limitations
+
+These assumptions have not yet been validated through real user interviews or production usage. They represent working hypotheses that should be tested and refined using qualitative research, usability testing, and product analytics after launch.

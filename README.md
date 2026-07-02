@@ -14,8 +14,10 @@ Transforming neighborhood trust into a scalable digital reputation system for ho
 
 <p align="center">
 
-![Product Management](https://img.shields.io/badge/Product-Management-blue?style=for-the-badge) ![Case Study](https://img.shields.io/badge/End--to--End-Case%20Study-success?style=for-the-badge) ![Prototype](https://img.shields.io/badge/Prototype-Live-orange?style=for-the-badge) ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge) ![MVP Strategy](https://img.shields.io/badge/MVP-Strategy-yellow?style=for-the-badge)
-
+![Product Management](https://img.shields.io/badge/Product-Management-blue?style=for-the-badge)
+![Case Study](https://img.shields.io/badge/End--to--End-Case%20Study-success?style=for-the-badge)
+![Prototype](https://img.shields.io/badge/Interactive-Prototype-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
 </p>
 
@@ -31,7 +33,6 @@ Transforming neighborhood trust into a scalable digital reputation system for ho
 <img src="https://img.shields.io/badge/📑_Presentation-View-red?style=for-the-badge">
 </a>
 
-
 <a href="#product-overview">
 <img src="https://img.shields.io/badge/📖_Case_Study-Read-black?style=for-the-badge">
 </a>
@@ -39,336 +40,110 @@ Transforming neighborhood trust into a scalable digital reputation system for ho
 </p>
 
 ---
+## Repository Guide
+
+| Looking for... | Location |
+|---------------|----------|
+| 📖 Complete Case Study | README.md |
+| 📊 Presentation Deck | docs/TrustFix_Presentation.pdf |
+| 🌐 Interactive Prototype | https://trust-fix-pwa.vercel.app |
+| 📝 Product Decisions | research/product-decisions.md |
+| ⚖️ Trade-offs | research/tradeoffs.md |
+| 📈 Competitor Analysis | research/competitive-analysis.md |
+| 💡 Assumptions | research/assumptions.md |
+
+---
 
 # Product Overview
 
-TrustFix is an end-to-end Product Management case study that explores how trust can become a competitive advantage in India's fragmented home services market.
+TrustFix is an end-to-end **Product Management case study** that explores how trust can become the primary competitive advantage in India's fragmented home services market.
 
-Instead of creating another marketplace where every customer starts from scratch, TrustFix proposes a neighborhood-first ecosystem where verified work builds a portable reputation over time. Every completed service strengthens a professional's credibility, allowing future customers to make more confident booking decisions.
+Instead of building another marketplace where every booking starts from zero, TrustFix introduces a **neighborhood-first reputation system** where every verified service strengthens a professional's credibility for future customers.
 
-The project covers the complete product lifecycle-from problem discovery and user understanding to MVP prioritization, UX design, go-to-market planning, success metrics, and an interactive prototype.
+The project covers the complete product lifecycle—from problem discovery and user research to MVP definition, UX design, go-to-market planning, success metrics, and an interactive prototype.
 
-This repository showcases both the product thinking and the implementation behind the solution.
-
----
-
-# Table of Contents
-
-- Product Overview
-- Problem Statement
-- Existing Market
-- Key Product Insight
-- Product Vision
-- User Personas
-- Solution Overview
-- Product Architecture
-- Customer Journey
-- Provider Journey
-- MVP Prioritization
-- Go-To-Market Strategy
-- Success Metrics
-- Risks & Trade-offs
-- Interactive Prototype
-- Tech Stack
-- Repository Structure
-- Key Learnings
-- Future Roadmap
+> **Goal:** Design a marketplace where trust compounds after every completed service instead of disappearing with each transaction.
 
 ---
 
-# Why This Project Exists
+# Problem Statement
 
-Booking a home service professional should be simple.
+Finding a trustworthy plumber, electrician, carpenter, or appliance repair technician remains a frustrating experience for both customers and service professionals.
 
-In reality, it rarely is.
+## Customer Challenges
 
-Imagine discovering an excellent plumber through your apartment WhatsApp group. The service is completed successfully, and the issue is resolved.
+- Finding reliable professionals
+- Verifying service quality before booking
+- Uncertain pricing
+- Limited accountability after service
+- Fragmented recommendations across WhatsApp groups and personal networks
 
-A few months later, another resident faces the same problem.
-
-The recommendation is buried somewhere in hundreds of chat messages.
-
-The professional's credibility exists only in someone's memory.
-
-The trust earned from previous work disappears.
-
-This pattern repeats every day across thousands of neighborhoods.
-
-Customers continue relying on fragmented referrals, while skilled professionals struggle to build credibility beyond their immediate customer base.
-
-Current marketplaces solve discovery reasonably well, but they still struggle to solve the deeper problem:
-
-> **Trust is created during every successful service, but it rarely compounds afterwards.**
-
-TrustFix was designed around a simple question:
-
-> **How might we design a marketplace where trust grows stronger after every completed job instead of resetting for every new customer?**
-
----
-
-# The Problem Statement
-
-The Indian home services ecosystem suffers from two interconnected challenges.
-
-## For Customers
-
-- Difficulty identifying trustworthy professionals
-- Heavy dependence on informal referrals
-- Uncertainty around service quality
-- Lack of pricing transparency
-- Limited accountability after booking
-- Inconsistent customer experience
-
-## For Service Professionals
+## Provider Challenges
 
 - Difficulty building long-term credibility
 - Heavy dependence on word-of-mouth
-- Irregular job opportunities
+- Irregular work opportunities
+- Limited visibility beyond existing customers
 - Poor customer retention
-- Limited visibility outside existing networks
 
-Both sides face the same underlying issue:
+The core issue is simple:
 
-**Trust does not scale.**
+> **Trust is created during every successful service, but it rarely persists beyond that transaction.**
 
 ---
 
-# Existing Market
+# Market Gap
 
-Today, customers typically discover service professionals through one of four channels.
+Customers currently discover home service professionals through multiple channels, each solving only part of the problem.
 
 | Channel | Strength | Limitation |
-|----------|-----------|------------|
+|----------|----------|------------|
 | Word of Mouth | High trust | Limited reach |
-| WhatsApp Groups | Local recommendations | Information quickly disappears |
-| Online Listings | Large supply | Difficult to verify quality |
-| Marketplace Apps | Convenience | Reputation remains platform-specific |
+| WhatsApp Groups | Local recommendations | Information disappears over time |
+| Online Listings | Large provider base | Difficult to verify quality |
+| Marketplace Apps | Convenient booking | Reputation remains platform-specific |
 
-Each solution solves only part of the problem.
-
-None effectively preserve and compound neighborhood trust over time.
+While existing solutions simplify discovery, none preserve neighborhood trust in a structured and reusable way.
 
 ---
 
-# Key Product Insight
+# Key Insight
 
-After studying the problem, one insight became clear.
+During problem analysis, one insight consistently emerged:
 
-> **People are not looking for the cheapest plumber.**
->
-> **They are looking for the plumber they can trust.**
+> **People are not looking for the cheapest service professional. They are looking for someone they can trust.**
 
-Every successful home service already creates trust.
+Every completed service already generates trust.
 
-The problem is not generating trust.
+The opportunity is not to create trust—but to preserve it, verify it, and allow it to benefit future customers.
 
-The problem is preserving it.
-
-Instead of repeatedly rebuilding confidence from scratch, TrustFix transforms every verified service into a reusable reputation signal that benefits future customers within the same neighborhood.
-
-This shifts trust from being an isolated transaction to becoming a community asset.
-
----
-
-# Product Vision
-
-> **To build India's most trusted neighborhood-first home services marketplace where every verified service strengthens both customer confidence and provider credibility.**
-
-The product aims to make discovering reliable professionals as easy as asking a trusted neighbor while maintaining the convenience and scalability of a digital marketplace.
-
----
-
-# Product Principles
-
-Before proposing any features, I defined a set of product principles that would guide every design decision throughout the project.
-
-These principles acted as constraints, ensuring the product remained focused on solving the core trust problem instead of becoming another feature-heavy marketplace.
-
----
-
-## Principle 1 - Trust Before Growth
-
-Most marketplaces prioritize increasing transactions.
-
-TrustFix prioritizes increasing customer confidence.
-
-The assumption is simple:
-
-> Sustainable growth follows when users consistently trust the platform.
-
-Every feature included in the MVP was evaluated based on one question:
-
-**Does this increase user trust?**
-
-If not, it was excluded.
-
----
-
-## Principle 2 - Reduce Friction
-
-Many home service customers are first-time or infrequent users.
-
-The booking experience should require as little effort as possible.
-
-Instead of forcing users to install another application, TrustFix uses **WhatsApp as the primary acquisition channel** and transitions users into a lightweight Progressive Web App (PWA) only when necessary.
-
-This minimizes onboarding friction while maintaining a rich product experience.
-
----
-
-## Principle 3 - Reputation Should Compound
-
-Every completed job creates trust.
-
-Unfortunately, that trust usually remains locked between one customer and one provider.
-
-TrustFix transforms verified service history into a reusable reputation system that benefits future customers within the same neighborhood.
-
-Trust should become stronger after every completed service-not disappear.
-
----
-
-## Principle 4 - Build for Both Sides of the Marketplace
-
-Marketplace success depends on balancing two user groups:
-
-- Customers
-- Service Professionals
-
-Improving the customer experience while neglecting providers creates supply problems.
-
-Supporting providers while ignoring customer trust reduces demand.
-
-Every feature was evaluated from both perspectives before being included in the MVP.
-
----
-
-## Principle 5 - Keep the MVP Simple
-
-Engineering resources are limited.
-
-The first version of the product should validate the core hypothesis rather than solve every marketplace problem.
-
-Only features directly supporting trust, booking, and service completion were included in the MVP.
-
-Everything else was intentionally deferred.
-
----
-
-# Success Criteria
-
-The proposed solution would be considered successful only if it could achieve the following outcomes.
-
-### Customer Outcomes
-
-- Higher confidence while booking services
-- Reduced dependence on informal referrals
-- Better transparency during service delivery
-- Improved booking experience
-
-### Provider Outcomes
-
-- Stronger professional credibility
-- More consistent job opportunities
-- Increased repeat customers
-- Better visibility within their neighborhood
-
-### Business Outcomes
-
-- Higher customer retention
-- Increased repeat bookings
-- Stronger marketplace liquidity
-- Sustainable network effects
-
----
-
-# From Insight to Solution
-
-After understanding the problem and defining the product principles, the next challenge was determining **how trust could actually become a product feature rather than just a marketing promise.**
-
-The solution was not to build another directory of service professionals.
-
-Instead, the goal was to design an ecosystem where every verified interaction continuously strengthened the credibility of the marketplace.
-
-This led to the design of **TrustFix**.
+This insight became the foundation of TrustFix.
 
 ---
 
 # Solution Overview
 
-TrustFix is a neighborhood-first home services marketplace designed around a simple idea:
+TrustFix is a neighborhood-first home services marketplace designed around one core principle:
 
-> **Trust should accumulate-not reset-after every completed service.**
+> **Trust should compound—not reset—after every verified service.**
 
-The product combines neighborhood-based discovery, verified service completion, transparent booking, and portable provider reputation into a single ecosystem that benefits both customers and professionals.
+The platform combines:
 
-Instead of relying primarily on anonymous ratings, TrustFix emphasizes **verified work history**, **completed neighborhood services**, and **community trust signals** to help customers make more confident booking decisions.
+- Neighborhood-based provider discovery
+- Verified service completion
+- Transparent booking
+- Portable provider reputation
+- Trust-based decision making
 
----
-
-# Core Product Components
-
-The MVP consists of four tightly connected components.
-
-## Customer Experience
-
-Customers discover trusted professionals through WhatsApp and seamlessly transition into the TrustFix Progressive Web App.
-
-They can
-
-- Browse service categories
-- Compare verified providers
-- View neighborhood trust indicators
-- Book appointments
-- Track service progress
-- Complete secure payments
-- Verify completed work
+Instead of relying primarily on anonymous ratings, TrustFix builds provider credibility using verified work history and meaningful trust signals collected through completed services.
 
 ---
-
-## Provider Experience
-
-Providers manage their business through a dedicated Provider PWA.
-
-They can
-
-- Receive booking requests
-- Accept or reject jobs
-- Navigate to customer locations
-- Upload proof of completed work
-- Track earnings
-- Build long-term reputation
-
----
-
-## Verification Layer
-
-Every completed job goes through a verification process before contributing to the provider's reputation.
-
-Verification ensures that reputation is based on actual completed services rather than unverified reviews.
-
-This creates a stronger foundation for marketplace trust.
-
----
-
-## Reputation System
-
-Instead of relying solely on star ratings, TrustFix continuously builds a provider's reputation using verified service history.
-
-Over time, customers gain greater confidence while providers benefit from increasing credibility within their local communities.
-
-This creates positive network effects where every successful service strengthens the marketplace for future users.
-
---- 
 
 # Product Architecture
 
-TrustFix is designed as a lightweight ecosystem that minimizes onboarding friction while maximizing trust throughout the service lifecycle.
+TrustFix minimizes onboarding friction while maintaining a structured service experience.
 
-Instead of forcing users to download another marketplace application, TrustFix leverages platforms users already trust and use every day.
-
-The architecture separates the customer and provider experiences while keeping both connected through a shared verification and reputation system.
-
+Customers begin from a familiar channel (WhatsApp) before moving into a lightweight Progressive Web App (PWA), while providers manage their operations through a dedicated Provider PWA.
 
 ```text
                       Customer (WhatsApp)
@@ -387,38 +162,33 @@ The architecture separates the customer and provider experiences while keeping b
          Verified Service History
 ```
 
-
 ---
 
-# Customer Journey
+# User Journey
 
-The customer experience is intentionally designed to reduce friction while increasing confidence during every stage of the booking process.
+## Customer Journey
 
 ```text
-            Discover Service
-                    ↓
-            Browse Providers
-                    ↓
-            Compare Trust Signals
-                    ↓
-            Book Service
-                    ↓
-            Track Provider
-                    ↓
-            Secure Payment
-                    ↓
-            Verify Completion
-                    ↓
-            Trust Score Updated
+Discover Service
+        ↓
+Browse Providers
+        ↓
+Compare Trust Signals
+        ↓
+Book Service
+        ↓
+Track Provider
+        ↓
+Complete Payment
+        ↓
+Verify Service
+        ↓
+Trust Score Updated
 ```
 
 ---
 
-# Provider Journey
-
-The provider journey focuses on operational simplicity.
-
-Since many service professionals have varying levels of digital literacy, every interaction is designed to minimize unnecessary complexity.
+## Provider Journey
 
 ```text
 Receive Request
@@ -429,37 +199,81 @@ Navigate
         ↓
 Complete Service
         ↓
-Upload Proof
+Upload Work Photos
         ↓
 Customer Verification
         ↓
-Reputation Updated
+Trust Score Updated
 ```
 
 ---
 
-# MVP Features
+# Prototype Preview
 
-The MVP focuses on validating the core hypothesis:
+The following screens demonstrate the proposed MVP experience for both customers and service professionals.
 
-> **Can verified neighborhood reputation increase trust in home service bookings?**
+## Customer Experience
 
-Every feature included directly supports this objective.
+<p align="center">
+
+<img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/02-home-dashboard.png" /><img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/04-provider-profile.png" /><img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/08-service-verification.png" />
+
+
+</p>
 
 ---
+
+## Provider Experience
+
+<p align="center">
+
+<img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/02-job-request.png" /><img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/05-waiting-verification.png" /><img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/06-reputation-dashboard.png" />
+
+</p>
+
+---
+
+# Interactive Prototype
+
+A high-fidelity interactive prototype was created to validate the proposed product experience.
+
+### Live Demo
+
+**🌐 https://trust-fix-pwa.vercel.app**
+
+The prototype includes:
+
+- Customer onboarding
+- Service discovery
+- Provider comparison
+- Booking workflow
+- Live service tracking
+- Provider dashboard
+- Service verification
+- Reputation updates
+
+> **Note:** The interface was generated using an AI-assisted UI generation tool. My contribution focused on defining the product strategy, user journeys, feature prioritization, interaction flows, information architecture, and validating the generated interface against the product requirements.
+
+---
+
+# MVP Scope
+
+The objective of the MVP is to validate one hypothesis:
+
+> **Can verified neighborhood reputation increase customer trust and improve booking confidence?**
 
 ## Customer Features
 
 | Feature | Purpose |
 |----------|----------|
-| Service Discovery | Browse available home services |
+| Service Discovery | Browse home service categories |
 | Provider Search | Find nearby verified professionals |
-| Provider Profile | View verified service history and trust indicators |
-| Booking Flow | Schedule services with minimal friction |
-| Live Tracking | Know provider location and ETA |
+| Provider Profiles | Compare trust signals before booking |
+| Booking Flow | Schedule services |
+| Live Tracking | Monitor provider arrival |
 | Digital Payments | Complete transactions securely |
 | Service Verification | Confirm completed work |
-| Booking History | View previous services |
+| Booking History | Access previous services |
 
 ---
 
@@ -468,336 +282,146 @@ Every feature included directly supports this objective.
 | Feature | Purpose |
 |----------|----------|
 | Dashboard | Manage daily operations |
-| Job Requests | Accept or decline bookings |
-| Navigation | Reach customers efficiently |
-| Work Proof Upload | Verify completed jobs |
-| Earnings Dashboard | Track weekly income |
+| Job Requests | Accept or reject bookings |
+| Navigation | Reach customer locations |
+| Work Photo Upload | Verify completed work |
+| Earnings Dashboard | Track weekly earnings |
 | Reputation Dashboard | Monitor Trust Score and verified jobs |
 
 ---
-
-# Trust Framework
-
-Unlike traditional marketplaces where reputation is primarily based on ratings, TrustFix builds credibility using multiple trust signals.
-
-| Trust Signal | Why it Matters |
-|---------------|----------------|
-| Verified Service History | Confirms actual completed work |
-| Neighborhood Reputation | Builds local credibility |
-| Job Completion Rate | Measures reliability |
-| Repeat Customers | Indicates customer satisfaction |
-| Verification Success | Ensures authentic transactions |
-
-These signals work together to create a more reliable representation of provider credibility than ratings alone.
-
----
-
-# Why WhatsApp?
-
-One of the most important product decisions was avoiding a traditional app-first onboarding flow.
-
-Instead, TrustFix uses WhatsApp as the initial discovery channel before transitioning users into a Progressive Web App.
-
-### Benefits
-
-- Familiar user experience
-- No app installation required
-- Lower customer acquisition friction
-- Faster MVP rollout
-- Better adoption among low digital literacy users
-
-### Trade-offs
-
-- Limited control over initial interactions
-- Dependency on WhatsApp deep linking
-- Reduced branding opportunities during acquisition
-
-Despite these limitations, the reduced friction made WhatsApp the preferred entry point for the MVP.
-
----
-
-# Why a Progressive Web App?
-
-Instead of building two native mobile applications, TrustFix adopts a Progressive Web App architecture.
-
-This decision aligns with the project's engineering constraints while maintaining a modern user experience.
-
-### Advantages
-
-- Faster development
-- Lower maintenance cost
-- Cross-platform compatibility
-- Instant updates
-- Lightweight experience
-
-This allows engineering resources to focus on validating product-market fit instead of platform-specific development.
-
----
-
-# Product Screens
-
-> The following high-fidelity prototype demonstrates the complete customer and provider experience designed for the MVP.
-
-<p align="center">
-
-📱 Customer App Screens
-
-<img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/02-home-dashboard.png" /><img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/04-provider-profile.png" /><img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/08-service-verification.png" />
-
-</p>
-
----
-
-<p align="center">
-
-🛠️ Provider App Screens
-
-<img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/02-job-request.png" /><img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/05-waiting-verification.png" /><img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/06-reputation-dashboard.png" />
-
-
-
-</p>
-
----
-
-# Interactive Prototype
-
-Experience the complete prototype here.
-
-🌐 **Live Demo**
-(https://trust-fix-pwa.vercel.app/)
-
-The complete customer and provider experience has been translated into an interactive high-fidelity prototype.
-
-The prototype demonstrates:
-
-- Customer onboarding
-- Service discovery
-- Booking flow
-- Provider dashboard
-- Service verification
-- Reputation updates
-- Payment flow
-- Trust score evolution
-
-**Note:** The prototype was created using an AI-assisted UI generation tool based on the product requirements and UX flows designed for this project. My primary contribution was defining the product strategy, user journeys, feature prioritization, interaction flows, and validating the generated interface against the product requirements.
-
----
-
 # MVP Prioritization
 
-The case explicitly required prioritizing features under limited engineering resources. Rather than building a feature-rich marketplace, the MVP was designed to validate one core hypothesis:
+The case study assumed limited engineering resources, making feature prioritization a key part of the solution. Rather than building a feature-rich marketplace, the MVP focuses on validating the product's core hypothesis while delivering value to both customers and service professionals.
 
-> **Will verified neighborhood reputation increase customer trust and improve booking confidence?**
+## Prioritization Framework
 
-Features were prioritized based on user value, implementation effort, business impact, and alignment with the core product vision.
+Features were prioritized using four criteria:
 
-## MVP Features
+- Customer Value
+- Business Impact
+- Engineering Effort
+- Contribution to Marketplace Trust
 
-| Priority | Feature | Why Included |
-|----------|----------|--------------|
-| P0 | Service Discovery | Enables customers to find professionals |
-| P0 | Provider Profiles | Establishes trust before booking |
-| P0 | Booking Flow | Core marketplace functionality |
-| P0 | Provider Dashboard | Allows providers to manage jobs |
-| P0 | Job Verification | Builds authentic reputation |
+| Priority | Feature | Rationale |
+|----------|----------|-----------|
+| P0 | Service Discovery | Core customer journey |
+| P0 | Provider Profiles | Enables informed booking decisions |
+| P0 | Booking Flow | Fundamental marketplace functionality |
+| P0 | Provider Dashboard | Required for provider operations |
+| P0 | Service Verification | Builds trusted reputation |
 | P0 | Reputation System | Core product differentiator |
 | P1 | Live Tracking | Improves customer confidence |
-| P1 | Digital Payments | Streamlines transactions |
-| P1 | Booking History | Supports repeat usage |
+| P1 | Digital Payments | Simplifies transactions |
+| P1 | Booking History | Encourages repeat usage |
 
-## Deferred Features
+### Out of Scope for MVP
 
-The following ideas were intentionally excluded from the MVP.
+The following ideas were intentionally deferred to keep the MVP focused.
 
-- AI recommendations
-- Insurance
+- AI-powered recommendations
+- Loyalty & referral programs
 - Escrow payments
-- Referral rewards
-- Loyalty programs
+- Insurance integration
 - Subscription plans
 - Community discussions
 - Advanced analytics
 - Provider financing
 
-These features may improve the product in later stages but do not directly validate the core trust hypothesis.
-
----
-
-# Key Product Decisions
-
-## Why WhatsApp?
-
-Instead of requiring customers to install another application, TrustFix uses WhatsApp as the initial acquisition channel.
-
-### Benefits
-
-- Familiar experience
-- Zero installation friction
-- Faster customer acquisition
-- Better accessibility for first-time users
-
-### Trade-off
-
-- Reduced control over the initial interaction
-- Dependency on WhatsApp deep links
-
----
-
-## Why a Progressive Web App?
-
-Developing native applications for both customers and providers would significantly increase engineering effort.
-
-A Progressive Web App enables:
-
-- Cross-platform compatibility
-- Faster development
-- Lower maintenance cost
-- Instant updates
-- Better alignment with MVP constraints
-
----
-
-## Why Neighborhood-Based Trust?
-
-Trust is inherently local.
-
-Customers are naturally more confident booking professionals who have successfully completed work within their own communities.
-
-Building reputation at the neighborhood level makes trust more meaningful and actionable.
-
----
-
-## Why Verified Service History Instead of Ratings Alone?
-
-Traditional ratings can be manipulated and often lack context.
-
-TrustFix prioritizes verified service completion, allowing reputation to be built from actual work performed rather than anonymous feedback alone.
+Detailed reasoning behind these decisions is available in **research/product-decisions.md**.
 
 ---
 
 # Go-To-Market Strategy
 
-Launching a two-sided marketplace is challenging because both supply and demand need to grow simultaneously.
+Launching a two-sided marketplace requires balancing supply and demand from day one.
 
-Instead of expanding across multiple cities immediately, TrustFix adopts a focused rollout strategy.
+Instead of scaling immediately, TrustFix adopts a phased rollout focused on building trust within dense local communities before expanding geographically.
 
-## Phase 1
+## Phase 1 -Apartment Communities
 
-Launch within gated residential communities.
+**Objective**
 
-Objective:
-
-- Validate trust model
+- Validate the trust model
 - Build provider reputation
 - Generate repeat bookings
 
 ---
 
-## Phase 2
+## Phase 2 -Neighborhood Expansion
 
-Expand to nearby neighborhoods.
-
-Objective:
+**Objective**
 
 - Increase marketplace liquidity
-- Grow verified professionals
+- Expand verified provider network
 - Strengthen local network effects
 
 ---
 
-## Phase 3
+## Phase 3 -City Expansion
 
-Expand city-wide.
-
-Objective:
+**Objective**
 
 - Scale operations
 - Introduce additional service categories
-- Build regional trust networks
+- Build city-wide trust networks
 
 ---
 
 # Success Metrics
 
-Success is measured through a combination of customer, provider, and business metrics.
+The success of TrustFix is measured through customer, provider, and business outcomes.
 
 ## North Star Metric
 
-**Verified Repeat Bookings**
+> **Verified Repeat Bookings**
 
-A repeat booking indicates that customers trusted the platform enough to return while providers continued delivering quality service.
+A repeat booking indicates that customers trust the platform enough to return while providers continue delivering quality service.
 
 ---
 
 ## Supporting Metrics
 
-### Customer Metrics
+### Customer
 
 - Booking Conversion Rate
-- Customer Satisfaction
+- Customer Satisfaction (CSAT)
+- Repeat Booking Rate
 - Average Booking Time
-- Repeat Customer Rate
 
-### Provider Metrics
+### Provider
 
 - Job Acceptance Rate
-- Completion Rate
+- Job Completion Rate
 - Average Trust Score
 - Repeat Customers
 
-### Business Metrics
+### Business
 
 - Monthly Active Users
 - Marketplace Liquidity
-- Revenue Growth
 - Customer Retention
-
----
-
-# Risks & Trade-offs
-
-| Risk | Impact | Mitigation |
-|-------|---------|------------|
-| Cold Start Problem | Low marketplace activity | Launch within apartment communities |
-| Fake Verification | Reduced trust | OTP confirmation + customer verification |
-| Low Provider Adoption | Limited supply | Simple provider experience |
-| Reputation Manipulation | Loss of credibility | Verified service completion only |
-| Marketplace Liquidity | Slow growth | Focus on dense neighborhoods first |
-
----
-
-# Technology Stack
-
-| Category | Technology |
-|-----------|------------|
-| Frontend | React |
-| Language | TypeScript |
-| Styling | Tailwind CSS |
-| UI Generation | Lovable |
-| Deployment | Vercel |
-| Version Control | Git & GitHub |
+- Revenue Growth
 
 ---
 
 # Repository Structure
 
-```
+```text
 TrustFix
 │
-├── docs
-│   ├── Presentation.pdf
-│   ├── Problem Statement.pdf
-│
 ├── assets
+│   ├── hero-banner.png
 │   ├── screenshots
-│   ├── diagrams
-│   └── hero-banner.png
+│   └── diagrams
+│
+├── docs
+│   ├── TrustFix_Presentation.pdf
+│   └── Problem_Statement.pdf
 │
 ├── research
 │   ├── assumptions.md
-│   ├── product-decisions.md
 │   ├── competitors.md
+│   ├── product-decisions.md
 │   └── tradeoffs.md
 │
 └── README.md
@@ -805,67 +429,117 @@ TrustFix
 
 ---
 
+# Research
+
+This repository includes supporting documents that capture the reasoning behind the final product decisions.
+
+| Document | Description |
+|----------|-------------|
+| assumptions.md | Core assumptions identified during product discovery |
+| competitors.md | Competitive landscape and market positioning |
+| product-decisions.md | Key product decisions and the rationale behind them |
+| tradeoffs.md | Important trade-offs made while defining the MVP |
+
+These documents provide additional context without overloading the main README.
+
+---
+
+# Technology Stack
+
+| Category | Technology |
+|----------|------------|
+| Product Documentation | Markdown |
+| Wireframing | Figma |
+| Prototype | React (AI-assisted generation via Lovable) |
+| Styling | Tailwind CSS |
+| Language | TypeScript |
+| Deployment | Vercel |
+| Version Control | Git & GitHub |
+
+---
+
 # Key Learnings
 
-Working on TrustFix reinforced several important lessons about product management.
+Building TrustFix reinforced several important product management principles.
 
-- Great products begin with deeply understanding the problem rather than immediately proposing solutions.
-- Product management is the art of making constrained decisions, not adding every possible feature.
-- Trust is not a feature-it is an outcome created through consistent product experiences.
+- Great products start with a clear understanding of the problem—not the solution.
+- Product managers create value by making informed trade-offs, not by adding more features.
+- Trust is not a standalone feature; it emerges from consistent product experiences.
 - Marketplace products require balancing customer and provider incentives simultaneously.
-- MVP design is about validating assumptions with the smallest possible solution.
-- Every product decision involves trade-offs, and documenting those trade-offs is as important as the decision itself.
+- A focused MVP creates faster learning than an overly ambitious first release.
+- Every product decision should be supported by a clear hypothesis that can be validated.
 
 ---
 
 # Future Roadmap
 
-## Phase 1 (Current MVP)
+The MVP establishes the foundation for a trusted neighborhood marketplace. Future iterations can expand the product while preserving the core trust model.
+
+## Phase 1 -Current MVP
 
 - Customer PWA
 - Provider PWA
-- Verified Reputation
-- Booking Flow
-- Payments
+- Verified Reputation System
+- Booking Workflow
+- Digital Payments
 
 ---
 
 ## Phase 2
 
-- Escrow Payments
-- Smart Matching
-- Service Packages
+- Smart Provider Matching
 - Apartment Partnerships
+- Service Packages
+- Escrow Payments
 
 ---
 
 ## Phase 3
 
-- Provider Financing
-- AI Scheduling Assistance
 - Predictive Maintenance
-- Enterprise Services
+- Enterprise & Society Management
+- Provider Financing
+- AI-assisted Scheduling
 
 ---
+# What This Project Demonstrates
 
+This project showcases an end-to-end Product Management workflow, including:
+
+- Problem identification and market analysis
+- User segmentation and pain point analysis
+- Product vision and strategy
+- MVP definition and feature prioritization
+- Customer and provider journey mapping
+- Go-to-market planning
+- Success metrics and North Star Metric definition
+- High-fidelity product prototyping
+- Documentation of assumptions, decisions, and trade-offs
+
+Rather than focusing only on the final solution, this repository documents the reasoning behind each major product decision.
+
+---
 # Acknowledgements
 
-This project was originally developed as a solution to a Product Management case competition and later expanded into a complete portfolio case study with an interactive prototype.
+TrustFix was originally developed as a solution to a Product Management case competition and later expanded into a complete portfolio project.
 
-The objective was not only to solve the given problem but also to demonstrate a structured approach to product thinking, prioritization, user experience design, and strategic decision-making under real-world constraints.
+The objective was not only to solve the problem but also to demonstrate structured product thinking, prioritization, UX design, and strategic decision-making under realistic engineering and business constraints.
 
 ---
 
 # Contact
 
-If you'd like to discuss this project, provide feedback, or connect regarding Product Management opportunities, feel free to reach out.
+If you'd like to discuss this project or connect regarding Product Management opportunities, feel free to reach out.
 
 **Mohit Joshi**
 
-- LinkedIn: *linkedin.com/in/mohit-joshi-iitp*
-- Email: *mohitjoshi250806@gmail.com*
-- Portfolio: **
+- LinkedIn: https://linkedin.com/in/mohit-joshi-iitp
+- Email: mohitjoshi250806@gmail.com
 
 ---
 
+<p align="center">
+
 ⭐ If you found this project interesting, consider starring the repository.
+
+</p>
