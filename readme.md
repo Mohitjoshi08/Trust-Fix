@@ -216,11 +216,8 @@ The following screens demonstrate the proposed MVP experience for both customers
 
 <p align="center">
 
-<img width="280" src="assets/screenshots/customer/home-dashboard.png">
+<img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/02-home-dashboard.png" /><img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/04-provider-profile.png" /><img width="278" height="868" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/customer-journey/08-service-verification.png" />
 
-<img width="280" src="assets/screenshots/customer/provider-profile.png">
-
-<img width="280" src="assets/screenshots/customer/service-verification.png">
 
 </p>
 
@@ -230,11 +227,7 @@ The following screens demonstrate the proposed MVP experience for both customers
 
 <p align="center">
 
-<img width="280" src="assets/screenshots/provider/job-request.png">
-
-<img width="280" src="assets/screenshots/provider/waiting-verification.png">
-
-<img width="280" src="assets/screenshots/provider/reputation-dashboard.png">
+<img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/02-job-request.png" /><img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/05-waiting-verification.png" /><img width="281" height="871" alt="image" src="https://github.com/Mohitjoshi08/Trust-Fix/blob/main/screenshots/provider%20journey/06-reputation-dashboard.png" />
 
 </p>
 
