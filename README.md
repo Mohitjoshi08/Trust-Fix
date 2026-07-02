@@ -565,10 +565,22 @@ This allows engineering resources to focus on validating product-market fit inst
 Experience the complete prototype here.
 
 🌐 **Live Demo**
-
 (https://trust-fix-pwa.vercel.app/)
 
+The complete customer and provider experience has been translated into an interactive high-fidelity prototype.
 
+The prototype demonstrates:
+
+- Customer onboarding
+- Service discovery
+- Booking flow
+- Provider dashboard
+- Service verification
+- Reputation updates
+- Payment flow
+- Trust score evolution
+
+**Note:** The prototype was created using an AI-assisted UI generation tool based on the product requirements and UX flows designed for this project. My primary contribution was defining the product strategy, user journeys, feature prioritization, interaction flows, and validating the generated interface against the product requirements.
 
 ---
 
@@ -757,18 +769,6 @@ A repeat booking indicates that customers trusted the platform enough to return 
 
 # Prototype
 
-The complete customer and provider experience has been translated into an interactive high-fidelity prototype.
-
-The prototype demonstrates:
-
-- Customer onboarding
-- Service discovery
-- Booking flow
-- Provider dashboard
-- Service verification
-- Reputation updates
-- Payment flow
-- Trust score evolution
 
 ---
 
