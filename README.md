@@ -410,15 +410,15 @@ A repeat booking indicates that customers trust the platform enough to return wh
 TrustFix
 │
 ├── assets
-│   ├── hero-banner.png
 │   ├── screenshots
-│   └── diagrams
+│   └──hero-banner.png
+│   
 │
 ├── docs
 │   ├── TrustFix_Presentation.pdf
 │   └── Problem_Statement.pdf
 │
-├── research
+├── research 
 │   ├── assumptions.md
 │   ├── competitors.md
 │   ├── product-decisions.md
